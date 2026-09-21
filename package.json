@@ -1,0 +1,25 @@
+{
+  "name": "hunmedia-liidiagentti",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20.6" },
+  "scripts": {
+    "kierros": "node --env-file=.env src/cli.js kierros",
+    "find": "node --env-file=.env src/cli.js find",
+    "audit": "node --env-file=.env src/cli.js audit",
+    "build": "node --env-file=.env src/cli.js build",
+    "deploy": "node --env-file=.env src/cli.js deploy",
+    "draft": "node --env-file=.env src/cli.js draft",
+    "review": "node --env-file=.env src/cli.js review",
+    "approve": "node --env-file=.env src/cli.js approve",
+    "set": "node --env-file=.env src/cli.js set",
+    "send": "node --env-file=.env src/cli.js send",
+    "status": "node --env-file=.env src/cli.js status",
+    "prune": "node --env-file=.env src/cli.js prune"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest",
+    "nodemailer": "^6.9.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kaupungit": ["Vantaa", "Espoo", "Helsinki", "Kerava", "Tuusula"],
+  "toimialat": [
+    "kampaamo",
+    "parturi",
+    "autokorjaamo",
+    "rengasliike",
+    "ravintola",
+    "pizzeria",
+    "kauneushoitola",
+    "hierontapalvelu",
+    "siivouspalvelu",
+    "remonttipalvelu",
+    "putkiliike",
+    "sähköasennus"
+  ],
+  "sivujaPerHaku": 1
+}
