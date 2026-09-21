@@ -9,7 +9,7 @@ Etsii pienyrityksiä, joilla ei ole verkkosivua tai joiden sivu on vanhentunut, 
 3. `cp .env.example .env` ja täytä avaimet:
    - **GOOGLE_PLACES_API_KEY**: Google Cloud Console → uusi projekti → ota käyttöön *Places API (New)* ja *PageSpeed Insights API* → Credentials → API key. Laita avaimeen rajoitus näihin kahteen rajapintaan.
    - **ANTHROPIC_API_KEY**: console.anthropic.com
-   - **DEPLOY_CMD** (valinnainen): esim. Netlify tai Cloudflare Pages, alidomainiin `demo.hunmedia.fi`.
+   - **DEPLOY_CMD=git** (oletus): demot pushataan GitHubiin ja Vercel julkaisee ne. Vercel lukee asetukset `vercel.json`-tiedostosta, joten mitään ei tarvitse säätää Vercelin asetuksista. Lisää Vercelissä domain `demo.hunmedia.fi`.
    - **SMTP-asetukset** (valinnainen): vain jos haluat lähettää sähköpostit suoraan täältä.
 4. Muokkaa `config/haut.json`: kaupungit ja toimialat.
 

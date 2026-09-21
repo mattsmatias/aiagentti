@@ -18,6 +18,17 @@ process.on('SIGINT', () => { persist(); process.exit(130); });
 function deploy() {
   const cmd = process.env.DEPLOY_CMD;
   if (!cmd) { console.log('  DEPLOY_CMD puuttuu, demot jäävät vain paikallisesti kansioon demos/'); return; }
+
+  if (cmd === 'git') {
+    const run = (c) => execSync(c, { cwd: ROOT, encoding: 'utf8' }).trim();
+    if (!run('git status --porcelain -- demos')) { console.log('  Ei uusia demoja julkaistavaksi'); return; }
+    run('git add demos');
+    run(`git commit -m "Uudet demot ${new Date().toISOString().slice(0, 10)}" -- demos`);
+    execSync('git push', { cwd: ROOT, stdio: 'inherit' });
+    console.log('  ✓ Pushattu GitHubiin, Vercel julkaisee hetken päästä');
+    return;
+  }
+
   execSync(cmd, { cwd: ROOT, stdio: 'inherit' });
 }
 

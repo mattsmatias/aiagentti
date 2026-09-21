@@ -1,0 +1,10 @@
+{
+  "framework": null,
+  "installCommand": "echo ohitetaan",
+  "buildCommand": "echo ohitetaan",
+  "outputDirectory": "demos",
+  "cleanUrls": true,
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+  ]
+}
